@@ -1,7 +1,7 @@
 <div>
-  <h1>Gallery list</h1>
-  <hero-details hero-item=""></hero-details>
-  <pre>{{ $ctrl | json }}</pre>
-  <p></p>
-  <pre>{{ query | json }}</pre>
+  <h1>Gallery list <{{ $ctrl.name }}></h1>
+  <gallery-details gallery-item="$ctrl.query.options"></gallery-details>
+  <br />
+  <h2>Query</h2>
+  <pre>{{ $ctrl.query | json }}</pre>
 </div>

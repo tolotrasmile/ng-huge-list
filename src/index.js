@@ -23,14 +23,14 @@ module.component("galleryList", {
   }
 });
 
-module.component("heroDetails", {
-  controller: function($scope) {
-    console.log($scope);
+module.component("galleryDetails", {
+  controller($scope) {
+    let ctrl = this;
+    console.log(ctrl, $scope);
   },
-  controllerAs: "ctrl",
-  templateUrl: "hero-details.view.html",
+  templateUrl: "gallery-details.view.html",
   bindings: {
-    heroItem: "<"
+    galleryItem: "<"
   }
 });
 

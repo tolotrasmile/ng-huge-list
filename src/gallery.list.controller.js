@@ -10,6 +10,4 @@ export default function($scope) {
       location: "Wayne Manor"
     }
   ];
-
-  console.log($scope);
 }
