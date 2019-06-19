@@ -1,0 +1,35 @@
+<div ng-init="init()">
+  <p>Tri</p>
+  <select
+    ng-options="option.name for option in options"
+    ng-model="query.options"
+  >
+  </select>
+  <p>Categories</p>
+  <form>
+    <div ng-repeat="category in categories track by $index">
+      <input
+        type="radio"
+        name="occurrences"
+        ng-value="category"
+        ng-model="query.categories"
+      />
+      <label>{{ category.name }}</label>
+    </div>
+  </form>
+  <p>Status</p>
+  <form>
+    <div ng-repeat="stat in status track by $index">
+      <input
+        type="radio"
+        name="occurrences"
+        ng-value="stat"
+        ng-model="query.status"
+      />
+      <label>{{ stat.name }}</label>
+    </div>
+  </form>
+  <div></div>
+    <gallery-list query="query"></gallery-list>
+  </div>
+</div>
