@@ -1,7 +1,12 @@
-<div>
-  <h1>Gallery list <{{ $ctrl.name }}></h1>
-  <gallery-details gallery-item="$ctrl.query.options"></gallery-details>
-  <br />
+<div ng-init="$ctrl.init()">
   <h2>Query</h2>
   <pre>{{ $ctrl.query | json }}</pre>
+  <h1>
+    Gallery list <strong style="color: red;"><{{ $ctrl.filter }}></strong>
+  </h1>
+  {{ $ctrl.list.length }}
+  {{ loading }}
+  <gallery-details ng-repeat="gallery in $ctrl.list" gallery-item="gallery">
+  </gallery-details>
+  <br />
 </div>

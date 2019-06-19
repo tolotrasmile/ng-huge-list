@@ -19,14 +19,16 @@ module.component("galleryList", {
   templateUrl: "gallery.list.view.html",
   bindings: {
     query: "<",
-    name: "<"
+    filter: "<"
   }
 });
 
 module.component("galleryDetails", {
   controller($scope) {
-    let ctrl = this;
-    console.log(ctrl, $scope);
+    const $ctrl = this;
+    $ctrl.test = function() {
+      console.log($ctrl.galleryItem);
+    };
   },
   templateUrl: "gallery-details.view.html",
   bindings: {

@@ -1,4 +1,11 @@
 <div>
-  <h2>Details</h2>
-  <div>Name: {{ $ctrl.galleryItem | json }}<br /></div>
+  <h2>{{ $ctrl.galleryItem.title }}</h2>
+  <div>Name: {{ $ctrl.galleryItem | json }}</div>
+  <br />
+  <button ng-click="$ctrl.test()">
+    OK
+  </button>
+  <button ng-click="$ctrl.test()">
+    CANCEL
+  </button>
 </div>
