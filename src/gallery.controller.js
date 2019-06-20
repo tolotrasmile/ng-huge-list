@@ -25,11 +25,11 @@ export default function($scope, $localStorage) {
       _id: undefined
     },
     {
-      name: "test-01",
+      name: "Categorie 1",
       _id: "5d08b95a4009b941f1b2c9c3"
     },
     {
-      name: "new category",
+      name: "Categorie 1",
       _id: "5d08e1449f308e09fae812cd"
     },
     {

@@ -1,12 +1,16 @@
-<div ng-init="$ctrl.init()">
-  <h2>Query</h2>
-  <pre>{{ $ctrl.query | json }}</pre>
+<div ng-if="canShow($ctrl.query.status)" ng-init="init()">
   <h1>
     Gallery list <strong style="color: red;"><{{ $ctrl.filter }}></strong>
   </h1>
-  {{ $ctrl.list.length }}
   {{ loading }}
-  <gallery-details ng-repeat="gallery in $ctrl.list" gallery-item="gallery">
+  <button ng-click="setPage(page - 1)" ng-disabled="page===0 || loading">
+    <
+  </button>
+  {{ page }}
+  <button ng-click="setPage(page + 1)" ng-disabled="hasMorePage || loading">
+    >
+  </button>
+  <gallery-details ng-repeat="gallery in list" gallery-item="gallery">
   </gallery-details>
   <br />
 </div>
