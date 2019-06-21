@@ -1,5 +1,7 @@
 <div ng-init="init()">
-  <pre style="position: absolute; top: 0; right: 0; padding: 10px;">{{query|json}}</pre>
+  <pre style="position: absolute; top: 0; right: 0; padding: 10px;">{{
+    query | json
+  }}</pre>
   <p>Tri</p>
   <select
     ng-options="option.name for option in options"
@@ -19,7 +21,7 @@
     </div>
   </form>
   <p>Status</p>
-  <form>
+  <div>
     <div ng-repeat="stat in status track by $index">
       <input
         type="radio"
@@ -29,10 +31,9 @@
       />
       <label>{{ stat.name }}</label>
     </div>
-  </form>
+  </div>
   <div></div>
   <gallery-list query="query" filter="'inProgress'"></gallery-list>
-    <gallery-list query="query" filter="'published'"></gallery-list>
-    <gallery-list query="query" filter="'archived'"></gallery-list>
-  </div>
+  <gallery-list query="query" filter="'published'"></gallery-list>
+  <gallery-list query="query" filter="'archived'"></gallery-list>
 </div>

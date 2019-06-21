@@ -15,7 +15,7 @@ export default function($scope) {
         $scope.hasMorePage = $scope.page > 5;
         $scope.list = data.slice(0, 1);
         $scope.loading = false;
-        console.log($scope.getNormalizedQuery($ctrl.query));
+        console.log(JSON.stringify($scope.getNormalizedQuery($ctrl.query)));
 
         // Force rerender
         $scope.$digest();
